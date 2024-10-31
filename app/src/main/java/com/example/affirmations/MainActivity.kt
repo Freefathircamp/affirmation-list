@@ -69,10 +69,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun AffirmationsApp() {
+fun AffirmationsApp(modifier: Modifier = Modifier) {
     val layoutDirection = LocalLayoutDirection.current
     Surface(
-        Modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .statusBarsPadding()
             .padding(
@@ -87,6 +87,7 @@ fun AffirmationsApp() {
         )
     }
 }
+
 
 @Composable
 fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
